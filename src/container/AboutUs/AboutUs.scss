@@ -1,0 +1,99 @@
+@import '../../scss/_helpers';
+
+.app {
+  &__aboutus {
+    position: relative;
+  }
+
+  &__aboutus-overlay {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__aboutus-overlay img {
+    width: 391px;
+    height: 415px;
+    z-index: 0;
+  }
+
+  &__aboutus-content {
+    width: 100%;
+    z-index: 2;
+  }
+
+  &__aboutus-content_about {
+    flex: 1;
+    @include flex-column-properties(flex-end, flex-end);
+    text-align: right;
+  }
+
+  &__aboutus-content_knife {
+    @include margin(2rem, 4rem, 2rem, 4rem);
+  }
+
+  &__aboutus-content_knife img {
+    height: 910px;
+  }
+
+  &__aboutus-content_history {
+    flex: 1;
+    @include flex-column-properties(flex-start, flex-start);
+    text-align: left;
+  }
+
+  &__aboutus-content_about p,
+  &__aboutus-content_history p {
+    @include margin(2rem, 0, 2rem, 0);
+    color: var(--color-grey);
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .app {
+    &__aboutus-content_knife img {
+      height: 800px;
+    }
+
+    &__aboutus-content_about p,
+    &__aboutus-content_history p {
+      @include margin(4rem, 0, 4rem, 0);
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .app {
+    &__aboutus-content {
+      @include display-direction-properties(column);
+    }
+
+    &__aboutus-content_knife {
+      @include margin(4rem, 0, 4rem, 0);
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app {
+    &__aboutus-content_knife img {
+      height: 500px;
+    }
+
+    &__aboutus-content_about p,
+    &__aboutus-content_history p {
+      @include margin(2rem, 0, 2rem, 0);
+    }
+
+    &__aboutus-content_knife {
+      @include margin(2rem, 0, 2rem, 0);
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .app {
+    &__aboutus-content_knife img {
+      height: 320px;
+    }
+  }
+}

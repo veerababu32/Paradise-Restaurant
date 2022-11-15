@@ -1,0 +1,33 @@
+@import '../../scss/_helpers';
+
+.app {
+  &__menuitem {
+    width: 100%;
+    @include display-direction-properties(column);
+    @include margin(1rem, 0, 1rem, 0);
+  }
+
+  &__menuitem-head {
+    @include flex-row-properities(space-between, center);
+  }
+
+  &__menuitem-sub {
+    width: 100%;
+    margin-top: 0.2rem;
+  }
+
+  &__menuitem-name {
+    flex: 1;
+  }
+
+  &__menuitem-dash {
+    width: 90px;
+    height: 1px;
+    background: var(--color-golden);
+    @include margin(0, 1rem, 0, 1rem);
+  }
+
+  &__menuitem-price {
+    @include flex-row-properities(flex-end, flex-end);
+  }
+}

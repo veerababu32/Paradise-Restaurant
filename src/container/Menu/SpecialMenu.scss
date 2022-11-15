@@ -1,0 +1,87 @@
+@import '../../scss/_helpers';
+
+.app {
+  &__specialMenu {
+    @include flex-column-properties(center, center);
+    background: var(--color-black);
+  }
+
+  &__specialMenu-title {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__specialMenu-menu {
+    width: 100%;
+    @include flex-row-properities(center, flex-start);
+  }
+
+  &__specialMenu_menu_heading {
+    color: var(--color-white);
+    font-family: var(--font-base);
+    font-size: 45px;
+    line-height: 58.5px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  &__specialMenu-menu_wine,
+  &__specialMenu-menu_cocktails {
+    flex: 1;
+    width: 100%;
+    @include display-direction-align-properties(column, center);
+  }
+
+  &__specialMenu-menu_img {
+    width: 410px;
+    @include margin(0, 2rem, 0, 2rem);
+  }
+
+  &__specialMenu-menu_img img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__specialMenu_menu_items {
+    @include display-direction-properties(column);
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .app {
+    &__specialMenu-menu_img {
+      width: 650px;
+    }
+
+    &__specialMenu-menu_img img {
+      height: 920px;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .app {
+    &__specialMenu-menu {
+      @include display-direction-align-properties(column, center);
+      width: 100%;
+    }
+
+    &__specialMenu-menu_img {
+      @include margin(3rem, 0, 3rem, 0);
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app {
+    &__specialMenu-menu_img {
+      width: 100%;
+    }
+
+    &__specialMenu-menu_heading {
+      font-size: 35px;
+      line-height: 48.5px;
+    }
+  }
+}

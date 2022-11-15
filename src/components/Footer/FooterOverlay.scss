@@ -1,0 +1,19 @@
+@import '../../scss/_helpers';
+.app {
+  &__footerOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @include display-direction-properties(column);
+  }
+
+  &__footerOverlay-black {
+    height: 25%;
+    background: var(--color-black);
+  }
+
+  &__footerOverlay-img {
+    height: 75%;
+  }
+}

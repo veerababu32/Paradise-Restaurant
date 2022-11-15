@@ -1,0 +1,51 @@
+@import '../../scss/_helpers';
+
+.app {
+  &__chef-content {
+    @include display-direction-properties(column);
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  &__chef-content_quote {
+    @include flex-row-properities(flex-start, flex-end);
+  }
+
+  &__chef-content_quote img {
+    width: 47px;
+    height: 40px;
+    @include margin(0, 1rem, 1rem, 0);
+  }
+
+  &__chef-sign {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  &__chef-sign p:first-child {
+    font-family: var(--font-base);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 41.6px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: var(--color-golden);
+  }
+
+  &__chef-sign img {
+    width: 250px;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .app__chef-sign img {
+    width: 370px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .app__chef-sign img {
+    width: 80%;
+  }
+}
