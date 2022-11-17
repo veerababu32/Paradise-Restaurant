@@ -5,7 +5,9 @@
 }
 
 .flex__center {
-  @include flex-row-properities(center, center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .app__bg {

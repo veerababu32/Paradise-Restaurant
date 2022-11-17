@@ -25,6 +25,10 @@
     text-align: center;
   }
 
+  &__footer-links_contact {
+    order: 0;
+  }
+
   &__footer-links_logo img:first-child {
     width: 210px;
     margin-bottom: 0.75rem;
@@ -61,7 +65,7 @@
   }
 
   .footer__copyright {
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 }
 
@@ -74,21 +78,25 @@
 
 @media screen and (max-width: 1150px) {
   .app__footer-links {
-    @include display-align-properities(center);
+    @include display-direction-align-properties(column, center);
     padding: 0;
   }
 
   .app__footer-links_contact,
   .app__footer-links_logo,
   .app__footer-links_work {
-    @include margin(2rem, 0, 2rem, 0);
+    @include margin(1rem, 0, 1rem, 0);
     width: 100%;
+  }
+
+  .app__footer-links_contact {
+    order: 1;
   }
 }
 
 @media screen and (max-width: 650px) {
   .app__footer {
-    @include margin(0, 0, 2rem, 0);
+    @include margin(0, 0, 1rem, 0);
   }
 }
 

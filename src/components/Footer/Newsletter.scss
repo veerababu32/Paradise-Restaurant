@@ -13,7 +13,7 @@
 
   &__newsletter-input {
     @include display-direction-properties(row);
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 
   &__newsletter-input input {
@@ -31,6 +31,10 @@
   &__newsletter-input button {
     width: max-content;
   }
+}
+
+.custom__button {
+  line-height: 30px !important;
 }
 
 @media screen and (min-width: 2000px) {
