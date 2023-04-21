@@ -1,4 +1,4 @@
-@import '../../scss/_helpers';
+@import "../../scss/_helpers";
 
 .app {
   &__laurels_awards {
@@ -10,7 +10,7 @@
   &__laurels_awards-card {
     flex: 1;
     @include flex-row-properities(flex-start, flex-start);
-    min-width: 230px;
+    width: 100%;
     margin: 1rem;
   }
 
